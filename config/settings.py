@@ -34,11 +34,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://134.122.66.117:8100", 
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "*",
     "134.122.66.117",
 
     # Qo'shimcha ruxsat berilgan domenlarni bu yerda kiritishingiz mumkin
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
