@@ -1,0 +1,9 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+    <h1>Application List</h1>
+    <ul>
+        <li><a href="{% url 'admin:app_list' app_label=cl.opts.app_label %}">{{ cl.opts.app_config.verbose_name }}</a></li>
+        <!-- boshqa elementlar -->
+    </ul>
+{% endblock %}

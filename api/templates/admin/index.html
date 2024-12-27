@@ -1,0 +1,13 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+    {{ block.super }}
+    <div class="custom-admin-links">
+        <h2>Tashqi Saytlar</h2>
+        <ul>
+            {% for link in custom_links %}
+                <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,61 @@
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+/static/
+media/
+
+# Django migrations
+*/migrations/*
+
+# PyCharm, VS Code, IntelliJ, etc
+.vscode/
+.idea/
+
+# Python virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Distribution / packaging
+*.egg
+*.egg-info
+dist/
+build/
+.eggs/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Sphinx documentation
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Coverage reports
+.coverage
+.coverage.*
+*.hypothesis/
+
+# mypy
+.mypy_cache/
+
+# pytest
+.cache/
+
+# Django REST Framework
+*.sqlite3

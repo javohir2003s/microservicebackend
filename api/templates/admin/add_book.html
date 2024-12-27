@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<h1>Kitob qo'shish</h1>
+<p>Bu yerda URL va kitob nomini kiritib, ma'lumotlarni saqlashingiz mumkin.</p>
+
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="default">Saqlash</button>
+</form>
+{% endblock %}
