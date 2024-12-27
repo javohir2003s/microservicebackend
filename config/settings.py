@@ -30,17 +30,14 @@ DEBUG = os.getenv("DEBUG") == "True"
 
 ALLOWED_HOSTS = ["134.122.66.117", "127.0.0.1"]
 
+
 CORS_ALLOWED_ORIGINS = [
-    "http://134.122.66.117:8100", 
-    "https://134.122.66.117:8100", 
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://134.122.66.117",
-    "https://134.122.66.117",
-
-    # Qo'shimcha ruxsat berilgan domenlarni bu yerda kiritishingiz mumkin
+    "http://134.122.66.117:8100",
+    "http://134.122.66.117:8101",
+    "http://localhost:8101",
+    "http://localhost:8100"
+    "http://127.0.0.1:9000",
 ]
-
 CORS_ALLOW_ALL_ORIGINS = True
 
 
@@ -146,17 +143,12 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
 
-# Statik fayllarni yig'ish uchun papka
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Qo'shimcha statik fayllar papkasi
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    BASE_DIR / 'static/'
 ]
 
 MEDIA_URL = '/media/'
