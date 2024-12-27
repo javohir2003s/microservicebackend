@@ -35,8 +35,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://134.122.66.117:8100",
     "http://134.122.66.117:8101",
     "http://localhost:8101",
-    "http://localhost:8100"
-    "http://127.0.0.1:9000",
+    "http://localhost:8100",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
