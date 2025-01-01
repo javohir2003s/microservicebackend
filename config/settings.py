@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") == "True"
 
-ALLOWED_HOSTS = ["134.122.66.117", "127.0.0.1"]
+ALLOWED_HOSTS = ["134.122.66.117", "127.0.0.1", "localhost"]
 
 
 CORS_ALLOWED_ORIGINS = [
@@ -96,7 +96,7 @@ DATABASES = {
         'NAME': 'library',        # PostgreSQL ma'lumotlar bazasi nomi
         'USER': 'postgres',            # PostgreSQL foydalanuvchi nomi
         'PASSWORD': 'Trader2024.',    # PostgreSQL foydalanuvchi paroli
-        'HOST': 'localhost',         # Server manzili, mahalliy server uchun 'localhost'
+        'HOST': 'db',         # Server manzili, mahalliy server uchun 'localhost'
         'PORT': '5432',              # PostgreSQL porti, standart port 5432
     },
     'telegram_users': {
@@ -104,7 +104,7 @@ DATABASES = {
         'NAME': 'telegram_users',
         'USER': 'postgres',
         'PASSWORD': 'Trader2024.',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
@@ -129,6 +129,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+}
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -143,12 +150,12 @@ USE_TZ = True
 
 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    BASE_DIR / 'static/'
-]
+
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

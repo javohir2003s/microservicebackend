@@ -23,8 +23,6 @@ from api.admin import my_admin_site
 
 urlpatterns = [
     path('admin/', my_admin_site.urls),
-    # path('myadmin/', admin_site.urls),
-    # path('users/', telegram_user_admin_site.urls),
     path('api/v1/', include('api.urls'))
 ]
 
@@ -32,3 +30,6 @@ urlpatterns = [
 # Media fayllarni xizmat qilish
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
