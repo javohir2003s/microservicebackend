@@ -35,9 +35,9 @@ services:
         - "8000:8000"
       networks:
         - backend
-  networks:
-    backend:
-      driver: bridge
+networks:
+  backend:
+    driver: bridge
 
 volumes:
   postgres_data:
