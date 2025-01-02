@@ -29,6 +29,15 @@ services:
       DB_USER: postgres 
       DB_PASSWORD: Trader2024.
       DB_HOST: db
+  nginx:
+      image: nginx:latest
+      ports:
+        - "8000:8000"
+      networks:
+        - backend
+  networks:
+    backend:
+      driver: bridge
 
 volumes:
   postgres_data:
