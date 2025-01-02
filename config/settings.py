@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["134.122.66.117", "127.0.0.1", "localhost"]
 
 
 CORS_ALLOWED_ORIGINS = [
+    "http://134.122.66.117:8000"
     "http://134.122.66.117:8100",
     "http://134.122.66.117:8101",
     "http://localhost:8101",
